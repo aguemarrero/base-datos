@@ -1,2 +1,3 @@
-# base-datos
-Repositorio de Ariadna Guerra para la asignatura de Base de Datos
+# Repositotio prácticas de BBDD
+
+Yo soy la descripcióen del repositorio.
