@@ -1,3 +1,3 @@
 # Repositotio prácticas de BBDD
 
-Yo soy la descripcióen del repositorio.
+Yo soy la descripción del repositorio.
