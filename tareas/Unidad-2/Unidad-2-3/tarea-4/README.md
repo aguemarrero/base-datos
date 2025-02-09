@@ -1,4 +1,6 @@
-# Tarea 4
+<img src="https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-2/Unidad-2-3/tarea-4/img/tarea4.png" alt="Unidad 4" width="300" height="200">
+
+
 ![Tarea cuatro diagrama](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-2/Unidad-2-3/tarea-4/img/EntidadRelacion.drawio.png)
 
 ## Entidad relación con Drawio
