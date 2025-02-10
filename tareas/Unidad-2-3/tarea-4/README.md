@@ -12,4 +12,3 @@ Relaciones:
 - Un partido tiene varios goles **(relación uno a muchos entre Partidos y Goles)**.
 - Un jugador puede meter varios goles en un partido **(relación uno a muchos entre Jugadores y Goles)**.
 
-# GRACIAS!
