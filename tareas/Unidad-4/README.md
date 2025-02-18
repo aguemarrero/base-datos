@@ -30,13 +30,6 @@
 | 1          | HP   |
 
 3. Aplicar **2FN**:
-   
- | ID_Producto | Nombre_Producto | 
-|------------|----------------|
-| 1          | Laptop         | 
-| 2          | Mouse          | 
-
-
 
 ![ Actividad 1 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio1.drawio.png)
 ---
@@ -52,10 +45,28 @@
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, separando valores repetidos y creando nuevas tablas si es necesario.
-2. Aplicar **2FN**, asegurando que las dependencias parciales sean eliminadas.
+ Aplicar **1FN**:
 
-> Verifica generando el modelo Entidad/Relación
+  | ID_Pedido | Cliente   | Dirección       | Producto     | Cantidad | Precio |
+|----------|----------|---------------|-------------|----------|--------|
+| 101      | Juan Pérez | Calle 123     | Laptop      | 1        | 1000   |
+| 102      | Ana López | Av. Central   | Teclado     | 2        | 50     |
+
+ Aplicar **2FN**:
+
+| ID_Pedido  | Cliente      | Dirección |
+|------------|----------------|------------|
+| 101        | Juan Pérez     | Calle 123  |
+| 102        | Ana Pérez      | Av.Central |
+
+
+| ID_Pedido  | Producto      | Cantidad | Precio |
+|------------|---------------|------------|------|
+| 101        | Laptop        |   1  | 1000  |
+| 102        | Teclado       |   2  | 50    |
+
+
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio2.drawio.png)
 
 ---
 
@@ -70,11 +81,21 @@
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando los valores multivaluados en "Teléfonos".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
 
-> Verifica generando el modelo Entidad/Relación
+   ***Tabla de Registro de empleados:***
 
+| ID_Empleado | Nombre   | Teléfonos | Departamento     |
+|----------|----------|-------------|-------------------|
+| 1        | Carlos R.| 12345     | Ventas   |
+| 1        | Carlos R.| 67890     | Ventas   |
+| 2        | Laura M. | 54321     | Finanzas |
+
+3. Aplicar **2FN**: 
+
+No es necesario realizar 2FN
+
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio3.drawio.png)
 ---
 
 ## **Ejercicio 4: Reservas de Hotel**
@@ -88,10 +109,33 @@
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando los valores multivaluados en "Fechas".
-2. Aplicar **2FN**, asegurando que las dependencias parciales sean eliminadas.
+1. Aplicar **1FN**:
 
-> Verifica generando el modelo Entidad/Relación
+ ***Tabla de Reservas de Hotel:***
+| ID_Reserva | Cliente    | Habitación | Fecha  | Precio |
+|------------|-----------|------------|---------|--------|
+| 5001      | Pedro G.  | 101        | 01/02 | 300    |
+| 5001      | Pedro G.  | 101        | 02/02 | 300    |
+| 5001      | Pedro G.  | 101        | 03/02 | 300    |
+| 5002      | María T.  | 202        | 10/03 | 200    |
+| 5002      | María T.  | 202        | 11/03 | 200    |
+
+2. Aplicar **2FN**:
+
+| ID_Reserva  | Cliente     | Habitacion | Precio |
+|------------|--------------|------------|--------|
+| 5001       | Pedro G.     | 101        | 300    |
+| 5002       | María T.      | Av.Central |
+
+| ID_Reserva  |    Fecha    |
+|------------|--------------|
+| 5001       | 01/02        |   
+| 5001       | 02/02        | 
+| 5001       | 03/02        | 
+| 5002       | 10/03        | 
+| 5002       | 11/03        | 
+
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio4.drawio.png)
 
 ---
 
@@ -106,11 +150,30 @@
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando valores multivaluados en "Horarios".
+1. Aplicar **1FN**:
+
+  | ID_Inscripción | Estudiante | Curso        | Profesor    | Horarios |
+|---------------|------------|--------------|------------|----------|
+| 3001         | Luis R.    | Matemáticas  | Prof. Pérez | Lunes 10AM |
+| 3001         | Luis R.    | Matemáticas  | Prof. Pérez | Miércoles 2PM |
+| 3002         | Ana S.     | Física       | Prof. Gómez | Martes 3PM |
+
 2. Aplicar **2FN**, asegurando que cada campo dependa completamente de la clave primaria.
 
-> Verifica generando el modelo Entidad/Relación
+***Nueva tablas: Inscripciones a cursos***:
 
+| ID_Inscripción | Estudiante | Curso        | Profesor    |
+|---------------|------------|--------------|------------|
+| 3001         | Luis R.    | Matemáticas  | Prof. Pérez |
+| 3002         | Ana S.     | Física       | Prof. Gómez |
+
+| ID_Inscripción  |    Horario    |
+|------------|--------------|
+| 3001       | Lunes 10AM        |   
+| 3001       | Miércoles 2PM     | 
+| 3002       | Martes 3PM        | 
+
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio5.drawio.png)
 ---
 
 ## **Ejercicio 6: Ventas de Tienda**
@@ -124,10 +187,31 @@
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, separando valores multivaluados en "Productos Comprados".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
+  ***Tabla de Ventas de Tienda***
+   
+| ID_Venta | Cliente    | Productos Comprados | Total |
+|----------|------------|---------------------|-------|
+| 8001     | Juan P.   | Celular    | 500   |
+| 8001     | Juan P.   | Funda      | 500   |
+| 8002     | Andrea M. | Laptop     | 1000  |
+2. Aplicar **2FN**:
 
-> Verifica generando el modelo Entidad/Relación
+***Nueva tablas: Ventas de Tienda***:
+
+| ID_Venta | Cliente | Total |
+|---------------|------------|--------------|
+| 8001         | Juan P.    | 500  |
+| 8002         | Andrea M.  | 1000 |
+
+| ID_Venta  |    Producto    |
+|------------|--------------|
+| 8001       | Celular   |   
+| 8001       | Funda     | 
+| 8001       | Laptop    | 
+
+
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio6.drawio.png)
 
 ---
 
@@ -145,7 +229,7 @@
 1. Aplicar **1FN**, eliminando valores multivaluados en "Autores".
 2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
 
-> Verifica generando el modelo Entidad/Relación
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio7.drawio.png)
 
 ---
 
@@ -163,7 +247,7 @@
 1. Aplicar **1FN**, separando valores multivaluados en "Servicios Contratados".
 2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
 
-> Verifica generando el modelo Entidad/Relación
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio8.drawio.png)
 
 ---
 
@@ -181,7 +265,7 @@
 1. Aplicar **1FN**, eliminando valores multivaluados en "Modelos".
 2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
 
-> Verifica generando el modelo Entidad/Relación
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio9.drawio.png)
 
 ---
 
@@ -199,6 +283,6 @@
 1. Aplicar **1FN**, eliminando valores multivaluados en "Miembros".
 2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
 
-> Verifica generando el modelo Entidad/Relación
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio10.drawio.png)
 
  </div>
