@@ -226,8 +226,28 @@ No es necesario realizar 2FN
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando valores multivaluados en "Autores".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
+   
+   | ID_Libro | Título | Autores          | Género  |
+|----------|--------|-----------------|---------|
+| 101      | El Quijote | Cervantes   | Novela  |
+| 102      | 1984       | Orwell       | Ciencia Ficción |
+
+2. Aplicar **2FN**:
+
+   | ID_Libro  | Titulo      | Género |
+|------------|----------------|------------|
+| 101        | El Quijote    | Novela          |
+| 102        | 1984          | Ciencia Ficción |
+
+| ID_Libro  | Autor      |
+|------------|---------------|
+| 101        | Cervantes     |
+| 102        | Orwell        | 
+
+
+
+   
 
 ![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio7.drawio.png)
 
@@ -244,8 +264,31 @@ No es necesario realizar 2FN
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, separando valores multivaluados en "Servicios Contratados".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
+
+   ***Tabla de Facturación de Servicios:***
+   
+| ID_Factura | Cliente   | Servicios Contratados | Costo Total |
+|------------|-----------|----------------------|-------------|
+| 9001       | Juan P.   | Internet  | 50          |
+| 9001       | Juan P.   | TV        | 50          |
+| 9002       | Ana M.    | Teléfono  | 20          |
+
+2. Aplicar **2FN**:
+
+***Nueva tablas: Facturación de Servicios***:
+
+| ID_Factura  | Cliente      | Costo_Total |
+|------------|----------------|------------|
+| 9001       | Juan P.        | 50     |
+| 9002       | Ana M.         | 20     |
+
+| ID_Factura  | Servicio      |
+|------------|---------------|
+| 9001        | Internet     |
+| 9001        | TV           |
+| 9002        | Telefono     | 
+
 
 ![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio8.drawio.png)
 
@@ -262,8 +305,27 @@ No es necesario realizar 2FN
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando valores multivaluados en "Modelos".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
+
+| ID_Vehículo | Marca   | Modelos          | Año |
+|------------|--------|----------------|-----|
+| 5001       | Toyota  | Corolla | 2022 |
+| 5001       | Toyota  | Yaris   | 2022 |
+| 5002       | Honda   | Civic   | 2023 |
+
+2. Aplicar **2FN**:
+***Nueva tablas: Gestión de Vehículos***:
+   
+| ID_Vehiculo  | Marca      | Año |
+|------------|----------------|------------|
+| 5001       | Toyota   | 2022  |
+| 5001       | Honda    | 2023  |
+
+| ID_Vehiculo  | Modelo      |
+|------------|---------------|
+| 5001        | Corolla     |
+| 5001        | Yaris       |
+| 5002        | Civic       |
 
 ![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio9.drawio.png)
 
@@ -280,8 +342,32 @@ No es necesario realizar 2FN
 
 ### **Tareas:**
 
-1. Aplicar **1FN**, eliminando valores multivaluados en "Miembros".
-2. Aplicar **2FN**, asegurando que cada atributo dependa completamente de la clave primaria.
+1. Aplicar **1FN**:
+
+***Tabla de Gestión de Proyectos:***
+
+| ID_Proyecto | Nombre       | Miembros        | Presupuesto |
+|------------|-------------|----------------|------------|
+| 7001       | Web App     | Ana      | 5000       |
+| 7001       | Web App     | Ana      | 5000       |
+| 7002       | E-commerce  | María    | 10000      |
+| 7002       | E-commerce  | Pedro    | 10000      |
+
+
+***Nueva tablas: Gestión de Proyectos***:
+
+| ID_Proyecto  | Nombre      | Presupuesto |
+|------------|----------------|------------|
+| 7001       | Web App        | 5000  |
+| 7002       | E-commerce     | 10000 |
+
+| ID_Proyecto  | Miembro      |
+|------------|---------------|
+| 7001      | Juan     |
+| 7001      | Ana      |
+| 7002      | Pedro    |
+| 7002      | María    |
+2. Aplicar **2FN**:
 
 ![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/img/ejercicio10.drawio.png)
 
