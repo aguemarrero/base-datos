@@ -103,5 +103,5 @@ No realizaré ningún cambio en 3FN , aunque me planteo si se pudiese realizar c
 
 ---
 
-
+![ Actividad 2 resuelta](https://github.com/aguemarrero/base-datos/blob/main/tareas/Unidad-4/tarea2/img/practicaExamen.drawio.png)
 
