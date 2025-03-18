@@ -70,8 +70,24 @@ Haciendo un __.read__ del fichero __sql__, de nombre __supermercado-db.sql__, re
 ### Paso 3: Responde a las siguientes cuestiones
 
 - Realiza el diagrama __ER__ de la __BBDD__ supermercado.
+![DIAGRAMA ER](https://github.com/aguemarrero/base-datos/blob/main/tareas/TEMA%203/Tarea4/ER.drawio.png))
 - Realiza el diagrama __MR__ de la __BBDD__ supermercado.
+![DIAGRAMA ER](https://github.com/aguemarrero/base-datos/blob/main/tareas/TEMA%203/Tarea4/MR.drawio.png)
 - Indica si la BBDD esta __normalizada__ hasta la 3ª forma normal, justificando la respuesta.
+
+1.Tabla Productos:
+Cumple con la primera forma normal porque tiene valores atómicos en cada columna.
+Está en 2FN ya que Nombre, Categoría y Precio dependen totalmente de la clave primaria.
+No se encuentra en 3FN porque la columna categoría depende de id_categoría por lo que se podría separar categoría en otra tabla.
+
+2.Tabla Ventas: 
+Cumple con la 1FN ya que tiene valores atómicos en cada columna.
+Está en 2FN ya que cantidad y fecha dependen completamente de id.
+
+
+Por lo tanto, la base de datos NO CUMPLE con la 3FN ya que categoría debería estar en una tabla separada.
+
+
 
 ### Paso 4: Responde a las siguientes cuestiones
 
