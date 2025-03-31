@@ -78,10 +78,11 @@ select * from productos;
 | 27 | Funda para Laptop                 | 29.99  |
 | 28 | Adaptador HDMI                    | 12.99  |
 +----+-----------------------------------+--------+
-
+```
 2. Listado de consultas: 
 
 -- Obtener todos los clientes.
+```sql
 select * from clientes;
 +----+-----------------+---------------------------+
 | id |     nombre      |           email           |
@@ -116,6 +117,7 @@ select * from clientes;
 | 28 | Roberto Ruiz    | roberto@example.com       |
 | 29 | Celia García    | celia@example.com         |
 +----+-----------------+---------------------------+
+```
 -- Obtener la cantidad total de productos en todos los pedidos
 ```sql
 SELECT SUM(cantidad) AS total_pedidos FROM pedidos;
