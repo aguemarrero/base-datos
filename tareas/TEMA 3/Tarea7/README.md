@@ -9,6 +9,7 @@ sqlite3 tarea7.db
 .tables
 clientes  coches    ventas
 ```
+
 ```sql
 select * from clientes;
 +------------+-----------------+------+----------------+
@@ -112,13 +113,13 @@ sqlite> select * from ventas;
 | 26       | 8          | 8        | 2023-08-25  |
 | 27       | 10         | 10       | 2023-10-05  |
 +----------+------------+----------+-------------+
-
 ```
+
 -- Listar los coches vendidos con sus modelos y precios, junto con los nombres de los clientes que los compraron.
   -- Cosas que debo de tener en cuenta:
     -- ¿Qué me están pidiendo?. ¿Qué es lo que no me han pedido?
 
-    ```sql
+```sql
  select coches.modelo,
    ...> coches.precio,
    ...> clientes.nombre
